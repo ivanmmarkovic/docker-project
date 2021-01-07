@@ -1,0 +1,35 @@
+version: '3.6'
+
+services:
+
+  node-prod:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    depends_on:
+      - mongodb
+
+
+  client-prod:
+    build:
+      context: ./www
+      dockerfile: Dockerfile
+    depends_on:
+      - node-prod
+      - mongodb
+
+  mongodb:
+    image: mongo
+    ports:
+      - '27017:27017'
+
+  nginx-prod:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - 8080:80
+    depends_on:
+      - node-prod
+      - client-prod

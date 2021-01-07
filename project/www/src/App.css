@@ -1,0 +1,7 @@
+nav {
+  text-align: center;
+}
+
+nav > .logo {
+  font-size: 2em;
+}

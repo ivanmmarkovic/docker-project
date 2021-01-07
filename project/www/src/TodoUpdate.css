@@ -1,0 +1,21 @@
+.update-todo-form{
+  margin: 0 auto;
+  margin-top: 50px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.update-todo-form > p {
+  font-size: 1.2em;
+  color: crimson;
+}
+
+.update-todo-form > i {
+  margin-top: 10px;
+  color:#26a69a;
+  cursor: pointer;
+  font-size: 25px;
+}
