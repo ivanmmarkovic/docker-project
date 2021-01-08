@@ -1,8 +1,8 @@
-# docker-project
+# react-express-mongodb-docker-project
 
-Technology used for project:
+Project is built with:
 - React - Create React App
-- Node.js - Express
+- Node.js - Express.js
 - MongoDB
 
 In project directory run docker-compose up --build
